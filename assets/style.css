@@ -255,33 +255,33 @@ section {
 }
 
 .to-do {
-background-image: url(./images/to-do.png);
+background-image: url(./images/to-do.PNG);
 background-size: cover;
 background-position: top; }
               
 .weather-app {
-background-image: url(./images/weather.png);
+background-image: url(./images/weather.PNG);
 background-size: cover;
 background-position: top; }
               
 .drum-set {
-background-image: url(./images/drum-set.png);
+background-image: url(./images/drum-set.PNG);
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center; }
               
 .wikipedia-viewer {
-background-image: url(./images/wikipedia-viewer.png);
+background-image: url(./images/wikipedia-viewer.PNG);
 background-size: cover;
 background-position: center 70%; }
               
 .quote-generator {
-background-image: url(./images/quote-generator.png);
+background-image: url(./images/quote-generator.PNG);
 background-size: cover;
 background-position: top; }
               
 .delaius {
-background-image: url(./images/delaius.png);
+background-image: url(./images/delaius.PNG);
 background-size: cover;
 background-position: top; }
 
