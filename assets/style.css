@@ -1,0 +1,312 @@
+/********** GLOBALS *******/
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 30px;
+
+  /* background: #00aa77;
+  background-image: url("./images/zenbg-1.png"), url("./images/zenbg-2.png");
+  background-repeat: repeat-x, repeat;  
+  background-attachment: fixed; 
+  color: #f5f5f5; */
+}
+
+section {
+  padding: 60px 10px;
+}
+
+section:nth-of-type(odd) {
+  color: #457fca;
+  background-color: #EEE;
+}
+
+section:nth-of-type(even):not(:last-of-type) {
+color: #f6f6f6;
+background: #457fca;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#my-projects {
+  background-color: #f6f6f6;
+  color: #457fca;
+}
+
+.container {
+width: 50%;
+margin: 0 auto;
+}
+
+.vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-family: 'Varela Round', sans-serif;
+  font-size: .95rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+/******* END GLOBALS ***********/
+
+/********** HEADER ***********/
+header {
+color: #f5f5f5;
+height: 70vh;
+/* background-image: url(./images/MESTO_SIVINA.jpg); */
+/* background-size: cover;
+background-position: bottom;
+background-attachment: fixed; */
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: -1;
+font-size: 1.3rem;
+background: #457fca;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+header p {
+  font-size: .9rem;
+}
+
+.header-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -80%);
+  text-shadow: 1px 1px 5px black;
+}
+
+
+/****** NAVBAR *********/
+.nav {
+  position: fixed;
+  color: #DDD;
+  top: 0;
+  left:  0;
+  right: 0;
+  z-index: 5;
+  transition: all 0.6s ease-in;
+}
+
+.nav-transparent {
+  background-color: rgba(38, 38, 38, .9);
+}
+/********* END NAVBAR  ********/
+
+.nav span {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  float: right;
+  margin: 5px 20px;
+  font-size: 1rem;
+}
+/************ END HEADER *********************/
+
+
+/************ ABOUT ME *****************/
+#about-me {
+  margin-top: 70vh;
+}
+
+#about-me p {
+  text-align: right;
+  padding-left: 50px;
+  width: 80%;
+  font-weight: 300;
+  text-align: left;
+}
+/********* END ABOUT ME *************/
+
+/*********** MY SKILLS  ********/
+.skills {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.skill {
+  margin: 5px 15px 20px 15px;
+}
+
+.devicon-jquery-plain-wordmark {
+  width: 200px;
+}
+
+/********** END MY SKILLS **********/
+
+/*********** MY PROJECTS ***********/
+.grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid > div {
+  font-size: 0.8rem;
+  border: 1px solid gray;
+  border-radius: 2px;
+  margin: 30px 40px;
+  width: 20%;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.grid p {
+  line-height: 20px;
+  color: #222;
+}
+
+/* Inner image */
+.grid > div > div {
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+  margin: 0 auto 20px auto;
+}
+
+#my-projects .container {
+  padding: 0;
+  width: 60%;
+}
+
+@media screen and (max-width: 1430px) {
+  #my-projects .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #my-projects .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .container {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 716px) {
+  .grid > div {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+section {
+  padding: 5px;
+}
+
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  #my-projects .container {
+    padding: 5px;
+    width: 100%;
+  }
+
+  .grid > div {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+.to-do {
+background-image: url(./images/to-do.png);
+background-size: cover;
+background-position: top; }
+              
+.weather-app {
+background-image: url(./images/weather.png);
+background-size: cover;
+background-position: top; }
+              
+.drum-set {
+background-image: url(./images/drum-set.png);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center; }
+              
+.wikipedia-viewer {
+background-image: url(./images/wikipedia-viewer.png);
+background-size: cover;
+background-position: center 70%; }
+              
+.quote-generator {
+background-image: url(./images/quote-generator.png);
+background-size: cover;
+background-position: top; }
+              
+.delaius {
+background-image: url(./images/delaius.png);
+background-size: cover;
+background-position: top; }
+
+/************ END MY PROJECTS **********************/
+
+/*********** FOOTER  ************/
+footer {
+  color: whitesmoke;
+  font-weight: initial;
+  background-color: #262626;
+  min-height: 10vh;
+  padding: 20px;
+}
+
+footer p {
+  font-size: 80%;
+}
+
+footer hr {
+  width: 10%;
+  border: .5px solid gray;
+}
+
+footer i {
+  margin: 15px;
+}
+
+/********* END FOOTER ************/
