@@ -324,8 +324,9 @@ transform: scale(1.1);
 }
 
 @media screen and (max-width: 570px) {
-section {
-  padding: 5px;
+section:not(#my-projects) {
+  padding: 20px;
+  text-align: left;
 }
 
   .container {
@@ -334,7 +335,7 @@ section {
   }
 
   #my-projects .container {
-    padding: 5px;
+    padding: 5px 80px;
     width: 100%;
   }
 
@@ -379,6 +380,7 @@ background-position: top; }
 
 body > p {
   font-weight: 700;
+  background-color: #f5f5f5;
 }
 
 /*********** FOOTER  ************/
