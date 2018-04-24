@@ -18,17 +18,17 @@ body {
 }
 
 section {
-  padding: 70px 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16) inset, 0 3px 6px rgba(0,0,0,0.23) inset;
+  padding: 60px 10px 100px 10px;
+  /* box-shadow: 0 3px 6px rgba(0,0,0,0.16) inset, 0 3px 6px rgba(0,0,0,0.23) inset; */
 }
 
 section:nth-of-type(odd) {
   color: #457fca;
-  background-color: #EEE;
+  background-color: #f5f5f5;
 }
 
 section:nth-of-type(even):not(:last-of-type) {
-color: #f6f6f6;
+color: #f5f5f5;
 
 background: #457fca;
 background: -webkit-linear-gradient(to right, #5691c8, #457fca);  
@@ -36,38 +36,35 @@ background: linear-gradient(to right, #5691c8, #457fca);
 }
 
 #my-projects {
-  background-color: #f6f6f6;
-  color: #457fca;
+  color: #f5f5f5;
 }
 
-.orange, strong, b, h4 {
-  color: rgb(254, 113, 77);
+b, strong {
+  font-size: 0.9rem;
 }
 
 .container {
-width: 50%;
+width: 45%;
 margin: 0 auto;
 }
 
-.vertical {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+i:not(.fab) {
+  margin-top: -25px;
 }
 
 h2 {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   text-decoration: underline;
   padding: 20px 20px 35px 20px;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 
 a {
   text-decoration: none;
-  color: #f6f6f6;
+  color: #f5f5f5;
 }
 
 /******* END GLOBALS ***********/
@@ -85,8 +82,6 @@ left: 0;
 right: 0;
 z-index: -1;
 font-size: 1.3rem;
-
-
 
 /* background: #457fca;
 background: -webkit-linear-gradient(to right, #5691c8, #457fca);  */
@@ -125,7 +120,7 @@ header p {
   /****** NAVBAR *********/
 .nav {
   position: fixed;
-  color: #DDD;
+  color: #f5f5f5;
   top: 0;
   left:  0;
   right: 0;
@@ -134,7 +129,7 @@ header p {
 }
 
 .nav-transparent {
-  background-color: rgba(38, 38, 38, .9);
+  background-color: #333;
 }
 
 .nav span {
@@ -142,7 +137,8 @@ header p {
   top: 5px;
   left: 20px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  color: rgb(254, 113, 77);
 }
 
 .nav ul {
@@ -162,7 +158,7 @@ header p {
 .nav li:after {
   content: "";
   position: absolute;
-  border: 1px solid orange;
+  border: 1px solid rgb(254, 113, 77);
   bottom:4px;
   left: 0;
   width: 1%;
@@ -174,9 +170,9 @@ header p {
   opacity: 1;
   width: 100%;
 }
-
   /********* END NAVBAR  ********/
 /************ END HEADER *********************/
+
 
 /************ ABOUT ME *****************/
 #about-me {
@@ -184,17 +180,17 @@ header p {
 }
 
 #about-me p {
-  text-align: right;
-  padding-left: 30px;
-  width: 80%;
   font-weight: 300;
-  text-align: left;
+  text-align: justify;
+  margin-top: 20px;
 }
+
 /********* END ABOUT ME *************/
 
 /*********** MY SKILLS  ********/
 #my-skills p {
   margin:10px 0 20px 0;
+  text-align: justify;
 }
 
 .skills {
@@ -204,7 +200,7 @@ header p {
 }
 
 .skill {
-  margin: 5px 15px 20px 15px;
+  margin: 0 15px 20px 15px;
 }
 
 .devicon-jquery-plain-wordmark {
@@ -213,9 +209,16 @@ header p {
 /********** END MY SKILLS **********/
 
 /************** MY CERTIFICATES ***********/
+  #my-certificates p {
+    text-align: left;
+  }
+
   #my-certificates ul {
     margin-top: 20px;
     list-style: none;
+    text-align: left;
+    list-style: initial;
+    margin-left: 15px;
   }
 
   #my-certificates li {
@@ -234,6 +237,11 @@ header p {
   margin: -10px 0 20px 0;
 }
 
+h4 {
+  color: rgb(69, 127, 202);
+  margin-top: -20px;
+}
+
 .grid {
   width: 100%;
   display: flex;
@@ -243,15 +251,15 @@ header p {
 
 .grid > div {
   font-size: 0.8rem;
-  border: 1px solid gray;
   border-radius: 2px;
   margin: 30px 40px;
   width: 20%;
   box-sizing: border-box;
-  box-shadow: 0px 3px 3px gray;
-  border-radius: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px #333;
   transition: all 0.3s ease-in-out;
   position: relative;
+  background-color: #f5f5f5;
 }
 
 /* Making the whole div clickable as a link, which is inside the div */
@@ -265,7 +273,7 @@ header p {
   /* Make link cover other elements inside the div */
   z-index: 10;
   /* Workarounds for IE to make link clickable */
-  background-color: white;
+  background-color: #f5f5f5;
   opacity: 0;
   filter: alpha(opacity=0);
 }
@@ -287,11 +295,11 @@ transform: scale(1.1);
 /* Inner image */
 .gdiv {
   box-sizing: border-box;
-  filter: grayscale(90%);
-  height: 100px;
+  filter: grayscale(20%);
+  height: 130px;
   width: 100%;
   margin: 0 auto 20px auto;
-  border-radius: 15px 15px 0 0;
+  border-radius: 5px 5px 0 0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -326,7 +334,6 @@ transform: scale(1.1);
 @media screen and (max-width: 570px) {
 section:not(#my-projects) {
   padding: 20px;
-  text-align: left;
 }
 
   .container {
@@ -379,35 +386,41 @@ background-position: top; }
 /************ END MY PROJECTS **********************/
 
 body > p {
-  font-weight: 700;
   background-color: #f5f5f5;
+  color: rgb(69, 127, 202);
+  padding: 100px;
 }
 
 /*********** FOOTER  ************/
 footer {
-  color: whitesmoke;
+  color: #f5f5f5;
   font-weight: initial;
-  background-color: #262626;
   min-height: 10vh;
   padding: 40px 5px;
   position: relative;
+  padding: 60px 0 80px 0;
+  background-color: #333;
+}
+
+footer .fa-2x {
+  font-size: 1.7rem;
 }
 
 footer p {
   font-size: 80%;
   position: absolute;
-  bottom:0px;
+  bottom:10px;
   left: 0;
   right: 0;
 }
 
-footer hr {
-  width: 10%;
-  border: .5px solid gray;
+hr {
+  width: 45%;
+  border: 0.2px solid rgba(255, 255, 255, 0.1);
+  margin-top: 3px;
 }
 
 footer a {
   margin: 15px;
 }
-
 /********* END FOOTER ************/
