@@ -1,3 +1,5 @@
+@import url(effects.css);
+
 /********** GLOBALS *******/
 * {
   box-sizing: border-box;
@@ -13,16 +15,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   line-height: 35px;
-
-  /* background: #00aa77;
-  background-image: url("./images/zenbg-1.png"), url("./images/zenbg-2.png");
-  background-repeat: repeat-x, repeat;  
-  background-attachment: fixed; 
-  color: #f5f5f5; */
 }
 
 section {
   padding: 70px 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16) inset, 0 3px 6px rgba(0,0,0,0.23) inset;
 }
 
 section:nth-of-type(odd) {
@@ -32,14 +29,19 @@ section:nth-of-type(odd) {
 
 section:nth-of-type(even):not(:last-of-type) {
 color: #f6f6f6;
-background: #457fca;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+background: #457fca;
+background: -webkit-linear-gradient(to right, #5691c8, #457fca);  
+background: linear-gradient(to right, #5691c8, #457fca);
 }
 
 #my-projects {
   background-color: #f6f6f6;
   color: #457fca;
+}
+
+.orange, strong, b, h4 {
+  color: rgba(254, 113, 77);
 }
 
 .container {
@@ -54,11 +56,18 @@ margin: 0 auto;
 }
 
 h2 {
-  font-family: 'Varela Round', sans-serif;
-  font-size: 1.1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
   text-transform: uppercase;
   text-decoration: underline;
   padding: 20px 20px 35px 20px;
+  letter-spacing: 5px;
+}
+
+
+a {
+  text-decoration: none;
+  color: #f6f6f6;
 }
 
 /******* END GLOBALS ***********/
@@ -67,19 +76,22 @@ h2 {
 header {
 color: #f5f5f5;
 height: 70vh;
-/* background-image: url(./images/MESTO_SIVINA.jpg); */
-/* background-size: cover;
+background-size: cover;
 background-position: bottom;
-background-attachment: fixed; */
+background-attachment: fixed;
 position: fixed;
 top: 0;
 left: 0;
 right: 0;
 z-index: -1;
 font-size: 1.3rem;
-background: #457fca;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+/* background: #457fca;
+background: -webkit-linear-gradient(to right, #5691c8, #457fca);  */
+background-image: url(./images/manny-pantoja.jpg);
+background-image: linear-gradient(to right, rgba(86, 145, 200, 0.8), rgba(69, 127, 202, 0.3)), url(./images/manny-pantoja.jpg);
 }
 
 header::before {
@@ -144,10 +156,27 @@ header p {
   display: inline-block;
   margin: 5px 20px;
   font-size: 1rem;
+  position: relative;
 }
+
+.nav li:after {
+  content: "";
+  position: absolute;
+  border: 1px solid orange;
+  bottom:4px;
+  left: 0;
+  width: 1%;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.nav li:hover:after {
+  opacity: 1;
+  width: 100%;
+}
+
   /********* END NAVBAR  ********/
 /************ END HEADER *********************/
-
 
 /************ ABOUT ME *****************/
 #about-me {
@@ -164,7 +193,6 @@ header p {
 /********* END ABOUT ME *************/
 
 /*********** MY SKILLS  ********/
-
 #my-skills p {
   margin:10px 0 20px 0;
 }
@@ -184,9 +212,7 @@ header p {
 }
 /********** END MY SKILLS **********/
 
-
 /************** MY CERTIFICATES ***********/
-
   #my-certificates ul {
     margin-top: 20px;
     list-style: none;
@@ -222,7 +248,34 @@ header p {
   margin: 30px 40px;
   width: 20%;
   box-sizing: border-box;
-  box-shadow: 2px 2px 5px gray;
+  box-shadow: 0px 3px 3px gray;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Making the whole div clickable as a link, which is inside the div */
+.grid > div a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  /* Make link cover other elements inside the div */
+  z-index: 10;
+  /* Workarounds for IE to make link clickable */
+  background-color: white;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.grid div:hover:not(.gdiv)  {
+transform: scale(1.1);
+}
+
+.grid div:hover .gdiv {
+  filter: grayscale(0%);
 }
 
 .grid p {
@@ -232,11 +285,14 @@ header p {
 }
 
 /* Inner image */
-.grid > div > div {
+.gdiv {
   box-sizing: border-box;
+  filter: grayscale(90%);
   height: 100px;
   width: 100%;
   margin: 0 auto 20px auto;
+  border-radius: 15px 15px 0 0;
+  transition: all 0.3s ease-in-out;
 }
 
 #my-projects .container {
@@ -321,17 +377,26 @@ background-position: top; }
 
 /************ END MY PROJECTS **********************/
 
+body > p {
+  font-weight: 700;
+}
+
 /*********** FOOTER  ************/
 footer {
   color: whitesmoke;
   font-weight: initial;
   background-color: #262626;
   min-height: 10vh;
-  padding: 20px;
+  padding: 40px 5px;
+  position: relative;
 }
 
 footer p {
   font-size: 80%;
+  position: absolute;
+  bottom:0px;
+  left: 0;
+  right: 0;
 }
 
 footer hr {
@@ -339,7 +404,7 @@ footer hr {
   border: .5px solid gray;
 }
 
-footer i {
+footer a {
   margin: 15px;
 }
 
