@@ -41,7 +41,7 @@ background: linear-gradient(to right, #5691c8, #457fca);
 }
 
 .orange, strong, b, h4 {
-  color: rgba(254, 113, 77);
+  color: rgb(254, 113, 77);
 }
 
 .container {
