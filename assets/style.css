@@ -12,7 +12,7 @@ body {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  line-height: 30px;
+  line-height: 35px;
 
   /* background: #00aa77;
   background-image: url("./images/zenbg-1.png"), url("./images/zenbg-2.png");
@@ -22,7 +22,7 @@ body {
 }
 
 section {
-  padding: 60px 10px;
+  padding: 70px 10px;
 }
 
 section:nth-of-type(odd) {
@@ -55,10 +55,10 @@ margin: 0 auto;
 
 h2 {
   font-family: 'Varela Round', sans-serif;
-  font-size: .95rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   text-decoration: underline;
-  margin-bottom: 20px;
+  padding: 20px 20px 35px 20px;
 }
 
 /******* END GLOBALS ***********/
@@ -102,10 +102,15 @@ header p {
   top: 50%;
   transform: translate(-50%, -80%);
   text-shadow: 1px 1px 5px black;
+  font-size: 1.8rem;
+}
+
+.header-text p {
+  margin-top: 20px;
 }
 
 
-/****** NAVBAR *********/
+  /****** NAVBAR *********/
 .nav {
   position: fixed;
   color: #DDD;
@@ -119,7 +124,6 @@ header p {
 .nav-transparent {
   background-color: rgba(38, 38, 38, .9);
 }
-/********* END NAVBAR  ********/
 
 .nav span {
   position: absolute;
@@ -133,13 +137,15 @@ header p {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: right;
 }
 
 .nav li {
-  float: right;
+  display: inline-block;
   margin: 5px 20px;
   font-size: 1rem;
 }
+  /********* END NAVBAR  ********/
 /************ END HEADER *********************/
 
 
@@ -150,7 +156,7 @@ header p {
 
 #about-me p {
   text-align: right;
-  padding-left: 50px;
+  padding-left: 30px;
   width: 80%;
   font-weight: 300;
   text-align: left;
@@ -158,6 +164,11 @@ header p {
 /********* END ABOUT ME *************/
 
 /*********** MY SKILLS  ********/
+
+#my-skills p {
+  margin:10px 0 20px 0;
+}
+
 .skills {
   display: flex;
   justify-content: space-evenly;
@@ -171,10 +182,32 @@ header p {
 .devicon-jquery-plain-wordmark {
   width: 200px;
 }
-
 /********** END MY SKILLS **********/
 
+
+/************** MY CERTIFICATES ***********/
+
+  #my-certificates ul {
+    margin-top: 20px;
+    list-style: none;
+  }
+
+  #my-certificates li {
+    margin-top: 10px;
+  }
+
+  #my-certificates i {
+    margin-bottom: 20px;
+  }
+
+/******************************************/
+
+
 /*********** MY PROJECTS ***********/
+#my-projects .container > p {
+  margin: -10px 0 20px 0;
+}
+
 .grid {
   width: 100%;
   display: flex;
@@ -195,6 +228,7 @@ header p {
 .grid p {
   line-height: 20px;
   color: #222;
+  padding: 5px;
 }
 
 /* Inner image */
