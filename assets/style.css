@@ -63,7 +63,6 @@ h2 {
   letter-spacing: 3px;
 }
 
-
 a {
   text-decoration: none;
   color: #f5f5f5;
@@ -172,6 +171,18 @@ header p {
   opacity: 1;
   width: 100%;
 }
+
+@media screen and (max-width: 740px) {
+  .nav {
+    height: 40px;
+    background-color: #333;
+  }
+  
+  .nav ul {
+    display: none;
+  }
+}
+
   /********* END NAVBAR  ********/
 /************ END HEADER *********************/
 
@@ -240,8 +251,18 @@ header p {
 
 /*********** MY PROJECTS ***********/
 #my-projects .container > p {
+  text-align: justify;
   margin: -10px auto 20px auto;
   width: 70%;
+}
+
+@media screen and (max-width: 570px ) {
+
+  #my-projects .container > p {
+    margin: 0px;
+    width: 100%;
+    padding: 15px;
+  }
 }
 
 h4 {
@@ -348,14 +369,9 @@ section:not(#my-projects) {
     padding: 0;
   }
 
-  #my-projects .container {
-    padding: 5px 80px;
-    width: 100%;
-  }
-
   .grid > div {
     width: 100%;
-    margin: 10px 0;
+    margin: 25px 60px;
   }
 }
 
