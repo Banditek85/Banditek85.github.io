@@ -171,19 +171,39 @@ header p {
   width: 100%;
 }
 
+.fa-bars {
+  position: absolute;
+  right: 10px;
+  top: 32px;
+}
+
+.hide {
+  display: none;
+}
+
 @media screen and (max-width: 740px) {
-  .nav {
-    height: 40px;
-    background-color: #333;
-  }
-  
-  .nav ul {
-    display: none;
+  .fa-bars {
+    display: inline;
   }
 
-  .header-text {
-    font-size: 0.8rem;
-    line-height: 20px;
+  .nav ul {
+    display: none;
+    background-color: #333;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .nav ul li {
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .nav ul.show {
+    display: block;
   }
 }
 
@@ -192,12 +212,11 @@ header p {
 
 
 /************ ABOUT ME *****************/
-
 #about-me {
   margin-top: 70vh;
 }
 
-@media screen and (max-height: 640px) {
+@media screen and (max-height: 900px) {
   #about-me {
     margin-top: 55vh;
   }
@@ -231,13 +250,18 @@ header p {
   margin: 0 15px 20px 15px;
 }
 
-.devicon-jquery-plain-wordmark {
-  width: 200px;
+i.devicon-jquery-plain-wordmark, i.devicon-bootstrap-plain {
+font-size: 2.8rem;
 }
 
-/* .future-skills {
-  font-size: 0.80rem;
-} */
+@media screen and (max-width:740px) {
+  i.devicon-jquery-plain-wordmark, i.devicon-bootstrap-plain {
+    font-size: 2.3rem;
+    }
+}
+
+
+
 /********** END MY SKILLS **********/
 
 /************** MY CERTIFICATES ***********/
@@ -470,3 +494,31 @@ footer a {
   margin: 15px;
 }
 /********* END FOOTER ************/
+
+@media screen and (max-width: 740px) {
+  .nav {
+    height: 40px;
+    background-color: #333;
+  }
+
+  body {
+    font-size: 0.85rem;
+  }
+  
+  .header-text {
+    font-size: 0.8rem;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 20px 5px 40px 5px;
+  }
+}
