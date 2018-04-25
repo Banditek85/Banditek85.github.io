@@ -15,6 +15,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   line-height: 35px;
+  
 }
 
 section {
@@ -39,7 +40,9 @@ background: linear-gradient(to right, #5691c8, #457fca);
 }
 
 b, strong {
-  font-size: 0.9rem;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 0.95rem;
 }
 
 .container {
@@ -189,7 +192,7 @@ header p {
 /*********** MY SKILLS  ********/
 #my-skills p {
   margin:10px 0 20px 0;
-  text-align: justify;
+  text-align: center;
 }
 
 .skills {
@@ -205,6 +208,10 @@ header p {
 .devicon-jquery-plain-wordmark {
   width: 200px;
 }
+
+/* .future-skills {
+  font-size: 0.80rem;
+} */
 /********** END MY SKILLS **********/
 
 /************** MY CERTIFICATES ***********/
@@ -233,7 +240,8 @@ header p {
 
 /*********** MY PROJECTS ***********/
 #my-projects .container > p {
-  margin: -10px 0 20px 0;
+  margin: -10px auto 20px auto;
+  width: 70%;
 }
 
 h4 {
@@ -389,6 +397,14 @@ body > p {
   color: rgb(69, 127, 202);
   padding: 100px;
 }
+
+
+/*********** BYE NOTE *********/
+#bye-note a {
+  color: rgb(69, 127, 202);
+  text-decoration: underline;
+}
+
 
 /*********** FOOTER  ************/
 footer {
