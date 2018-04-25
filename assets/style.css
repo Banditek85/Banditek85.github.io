@@ -15,7 +15,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   line-height: 35px;
-  
 }
 
 section {
@@ -181,6 +180,11 @@ header p {
   .nav ul {
     display: none;
   }
+
+  .header-text {
+    font-size: 0.8rem;
+    line-height: 20px;
+  }
 }
 
   /********* END NAVBAR  ********/
@@ -188,8 +192,19 @@ header p {
 
 
 /************ ABOUT ME *****************/
+
 #about-me {
   margin-top: 70vh;
+}
+
+@media screen and (max-height: 640px) {
+  #about-me {
+    margin-top: 55vh;
+  }
+
+  .header-text {
+    transform: translate(-50%, -45%);
+  }
 }
 
 #about-me p {
