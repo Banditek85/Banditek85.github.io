@@ -212,16 +212,25 @@ header p {
     font-size: 0.7rem;
     margin: 10px 20px;
   }
-
-  #nav-cert {
-    display: none;
-  }
   
   .nav ul.show {
     display: block;
     visibility: visible;
     left: 0;
     right: 0;
+  }
+}
+
+/** Hiding non-essential navigation links on smaller screens **/
+@media screen and (max-width: 490px) {
+  #nav-cert {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  #nav-work {
+    display: none;
   }
 }
   /********* END NAVBAR  ********/
