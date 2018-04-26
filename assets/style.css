@@ -197,17 +197,19 @@ header p {
     visibility: hidden;
     background-color: #333;
     position: absolute;
-    top: -90px;
-    left: 0;
-    right: 0;
+    top: 40px;
+    left: -740px;
+    right: 740px;
     text-align: center;
     padding: 0;
     margin: 0;
-    transition: all .6s ease;
+    transition: all .4s ease;
+    overflow: hidden;
+    height: 50px;
   }
 
   .nav ul li {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin: 10px 20px;
   }
 
@@ -218,7 +220,8 @@ header p {
   .nav ul.show {
     display: block;
     visibility: visible;
-    top: 40px;
+    left: 0;
+    right: 0;
   }
 }
   /********* END NAVBAR  ********/
@@ -532,10 +535,12 @@ footer a:hover {
 @media screen and (max-width: 740px) {
   .nav {
     height: 40px;
+    background-color: #333;
   }
 
   body {
     font-size: 0.85rem;
+    line-height: 30px;
   }
   
   .header-text {

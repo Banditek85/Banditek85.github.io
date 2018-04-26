@@ -2,16 +2,14 @@ function addListeners() {
     let burger = document.querySelector(".fa-bars");
     let navbar = document.querySelector(".nav");
 
-
-    /** Navbar black color listener */
+/** Navbar black color listener */
     window.addEventListener("scroll", function () {
-        if (this.pageYOffset > 350) {
+        if (this.pageYOffset > 150) {
             navbar.classList.add("nav-transparent");
         } else(navbar.classList.remove("nav-transparent"));
     });
 
-
-    /** Burger menu click listener */
+/** Burger menu click listener */
     burger.addEventListener("click", function () {
         let nav = document.querySelector(".nav ul");
         nav.classList.toggle("show");
@@ -20,22 +18,15 @@ function addListeners() {
 
 function type() {
     const headerText = document.querySelector(".header-text");
-    const h1 = headerText.children[0];
-    const h2 = headerText.children[1];
-    const h1Text = "Hello world!";
+    const text = headerText.children[1];
     const h2Text = "I am a web developer";
     let i = 0;
-    let j = 0;
-    const speed = 250;
+    const speed = 150;
 
     function typeWriter() {
-        if (i < h1Text.length) {
-            h1.textContent += h1Text.charAt(i);
+        if (i < h2Text.length) {
+            text.textContent += h2Text.charAt(i).toUpperCase();
             i++;
-            setTimeout(typeWriter, speed);
-        } else if (j < h2Text.length) {
-            h2.textContent += h2Text.charAt(j).toUpperCase();
-            j++;
             setTimeout(typeWriter, speed);
         }
     }
