@@ -2,12 +2,16 @@ function addListeners() {
     let burger = document.querySelector(".fa-bars");
     let navbar = document.querySelector(".nav");
 
+
+    /** Navbar black color listener */
     window.addEventListener("scroll", function () {
         if (this.pageYOffset > 350) {
             navbar.classList.add("nav-transparent");
         } else(navbar.classList.remove("nav-transparent"));
     });
 
+
+    /** Burger menu click listener */
     burger.addEventListener("click", function () {
         let nav = document.querySelector(".nav ul");
         nav.classList.toggle("show");
