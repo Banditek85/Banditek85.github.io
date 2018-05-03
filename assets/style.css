@@ -204,8 +204,8 @@ header p {
     padding: 0;
     margin: 0;
     transition: all .4s ease;
-    overflow: hidden;
-    height: 50px;
+    /* white-space: nowrap; */
+    /* height: 50px; */
   }
 
   .nav ul li {
@@ -233,6 +233,7 @@ header p {
     display: none;
   }
 }
+
   /********* END NAVBAR  ********/
 /************ END HEADER *********************/
 
