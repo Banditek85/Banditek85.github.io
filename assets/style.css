@@ -66,6 +66,12 @@ a {
   color: #f5f5f5;
 }
 
+#my-certificates a {
+  color: #457fca;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 #logo {
   width: 35px;
   height: 15px;
@@ -337,7 +343,7 @@ font-size: 2.8rem;
 
 /*********** MY PROJECTS ***********/
 #my-projects .container > p {
-  text-align: justify;
+  text-align: left;
   margin: -10px auto 20px auto;
   width: 70%;
 }
@@ -405,7 +411,7 @@ box-shadow: 0 4px 5px #333;
   color: #333;
   padding: 5px;
   padding: 20px;
-  text-align: justify;
+  text-align: left;
 }
 
 /* Inner image */
