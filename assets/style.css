@@ -95,6 +95,14 @@ a {
   margin-bottom: -1px;
 }
 
+#bye-note a {
+  color: white;
+  background: -webkit-linear-gradient(to right, #5691c8, #457fca);  
+  background: linear-gradient(to right, #5691c8, #457fca);
+  padding: 8px;
+  border-radius: 4px;
+}
+
 /******* END GLOBALS ***********/
 
 /********** HEADER ***********/
@@ -152,8 +160,9 @@ header p {
   top: 0;
   left:  0;
   right: 0;
-  z-index: 5;
+  z-index: 10;
   transition: all 0.6s ease-in;
+  height: 50px;
 }
 
 .nav-transparent {
@@ -179,7 +188,6 @@ header p {
 .nav li {
   display: inline-block;
   margin: 5px 20px;
-  font-size: 0.90rem;
   position: relative;
 }
 
@@ -516,14 +524,6 @@ body > p {
   color: rgb(69, 127, 202);
   padding: 100px;
 }
-
-
-/*********** BYE NOTE *********/
-#bye-note a {
-  color: rgb(69, 127, 202);
-  text-decoration: underline;
-}
-
 
 /*********** FOOTER  ************/
 footer {
