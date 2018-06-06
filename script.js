@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
 
         /** Navbar black color listener */
         window.addEventListener("scroll", function () {
-            if (this.pageYOffset > 150) {
+            if (this.pageYOffset > 100) {
                 navbar.classList.add("nav-transparent");
             } else (navbar.classList.remove("nav-transparent"));
         });
@@ -40,22 +40,30 @@ window.addEventListener("load", function () {
     }, 500);
 
     // Runtime
-    // Loading the ParticlesJs library
-    particlesJS.load('particles-js', 'assets/particlesjs-config.json');
 
     addListeners();
     type();
 
     // Eye candy
-    let skill = document.querySelectorAll("#my-skills .skill");
 
     let html = document.querySelector(".html");
 
     // Waypoint.js
     var skillsIn = new Waypoint({
         element: document.getElementById("my-skills"),
-        handler: function (direction) {
+        handler: function () {
+            var els = document.querySelectorAll('#my-skills .skill');
+            var nodeList = anime({
+                targets: els,
+                rotate: '1turn',
+                delay: function(el, i, l) {
+                  return i * 200;
+                }
+              },);
         },
-        offset: 600
+        offset: '75%'
     });
+
+
+    
 });
